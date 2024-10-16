@@ -17,12 +17,23 @@ TinyGoは、Goのツールチェーンを必要とします。まだインスト
 
   * Goの公式サイト：[https://go.dev/doc/install](https://www.google.com/url?sa=E&source=gmail&q=https://go.dev/doc/install)
 
-#### 2\. **TinyGoのインストール**
+#### 2\. **Scoopのインストール**
+2024年10月17日現在、TinyGo公式サイトでは、コマンド```go install```によるインストール方法は表記されていません。表記されているのはコマンド```scoop install```ですが、WindowsOSでは初期にはインストールされいないので、以下のコマンドでインストールします。
+
+```powershell
+iex ((New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh'))
+```
+
+#### 3\. **TinyGoのインストール**
+
+TinyGoをインストールする前に、Goがインストールされていない場合は、以下のコマンドでもインストールできます。
+```bash
+scoop install go
+```
 
 Goのツールチェーンがインストールされていることを確認後、以下のコマンドを実行してTinyGoをインストールします。
-
 ```bash
-go install tinygo.org/x/tinygo/cmd/tinygo@latest
+scoop install tinygo
 ```
 
 このコマンドを実行すると、`$GOPATH/bin`ディレクトリに`tinygo`コマンドがインストールされます。
