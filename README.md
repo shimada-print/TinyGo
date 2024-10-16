@@ -52,12 +52,6 @@ tinygo version
     これにより、任意のディレクトリから`tinygo`コマンドを実行できるようになります。
 
 ### その他
-
-  * **特定のバージョンをインストールする場合:**
-    ```bash
-    go install tinygo.org/x/tinygo/cmd/tinygo@v0.21.0
-    ```
-    のように、バージョンを指定してインストールできます。
   * **詳細なインストール手順:**
     TinyGoの公式ドキュメントに、より詳細なインストール手順が記載されています。
     [https://tinygo.org/getting-started/install/](https://www.google.com/url?sa=E&source=gmail&q=https://tinygo.org/getting-started/install/)
@@ -83,6 +77,11 @@ func main() {
 ```
 
 このコードは、Arduino Unoなどのボードに搭載されているLEDを1秒間隔で点滅させるプログラムです。
+
+machineパッケージが見当たらないというエラー表示が出たら、下記のコマンドを入力し最新バージョンをインストールしてください。
+```
+go install github.com/tinygo-org/machine@latest
+```
 
 ### まとめ
 
